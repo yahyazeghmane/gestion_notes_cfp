@@ -1,0 +1,25 @@
+<div class="container">
+  <table class="table table-bordered table-sm" *ngIf="notes">
+    <thead>
+      <th>Id</th>
+      <th>Date</th>
+      <th>Créateur</th>
+      <th>Ecole</th>
+      <th>Année Scolaire</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let note of notes.content">
+        <td>{{note.id}}</td>
+        <td>{{note.createdAt}}</td>
+        <td>{{note.createur}}</td>
+        <td>{{note.ecole}}</td>
+        <td>{{note.anneeScolaire}}</td>
+        <td>
+          <button class="btn btn-success m-2">Edit</button>
+          <button class="btn btn-danger">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
